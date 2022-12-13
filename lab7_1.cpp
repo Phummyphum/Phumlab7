@@ -2,7 +2,6 @@
 #include<string>
 
 using namespace std;
-
 string func1(string x){
 	int i = 0, L = x.size();
 	string y = "";
@@ -34,8 +33,16 @@ string func3(string x){
 }
 
 int main(){
-    cout >> "Input text: "
-    cout >> "Reversed text: "
-    cout >> "Palindrome: "
+	string x;
+    cout << "Input text: ";
+	cin >> x;
+    cout << "Reversed text: ";
+	cout << func1(x) << "\n";
+    cout << "Palindrome: ";
+	if(func3(x) == func3(func1(x))){
+		cout << "Yes";
+	}else{
+		cout << "No";
+	}
     return 0;
 }
